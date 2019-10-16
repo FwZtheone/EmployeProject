@@ -1,12 +1,11 @@
-import StrategyClassification.HourlyClassification;
-import StrategyClassification.PayementClassification;
-import StrategyClassification.SalariedClassification;
-import StrategyClassification.TimeCard;
+import StrategyClassification.*;
+import StrategyPayement.CashMethod;
 import StrategyPayement.DirectDepositMethod;
 import StrategyPayement.MailMethod;
 import StrategyPayement.PayementMethod;
 import StrategySchedule.MonthlyPayementSchedule;
 import StrategySchedule.PayementSchedule;
+import StrategySchedule.TwoWeekPay;
 import StrategySchedule.WeeklyPayementSchedule;
 import org.junit.Before;
 import org.junit.Test;
@@ -53,12 +52,36 @@ public class TestEmploye {
         ((HourlyClassification)classification).addTimeCard(new TimeCard(nextDate, 10.0));
 
         assertEquals(360.0,employe.calculPay(),0.01);
-//
-//        PayementSchedule ps = employe.getPayementSchedule();
-//        assertTrue(ps instanceof WeeklyPayementSchedule);
-//
-//        PayementMethod pm = employe.getPayMethod();
-//        assertEquals("mail : toto@gmail.com",pm.toString());
+
+        PayementSchedule ps = employe.getPayementSchedule();
+        assertTrue(ps instanceof WeeklyPayementSchedule);
+
+        PayementMethod pm = employe.getPayMethod();
+        assertEquals("mail : toto@gmail.com",pm.toString());
+    }
+
+    @Test
+    public void createCommissionEmploye(){
+        employe.setPayClassification(new CommissionClassification(1000));
+        employe.setPayMethod(new CashMethod());
+        employe.setPaySchedule(new TwoWeekPay());
+        Calendar date = new GregorianCalendar(2019,10,1);
+        Calendar nextDate = new GregorianCalendar(2019,10,2);
+
+        PayementClassification classification= employe.getPayClassfication();
+        ((CommissionClassification)classification).addSaleReceipt(new SaleReceipt(date,200));
+        ((CommissionClassification)classification).addSaleReceipt(new SaleReceipt(nextDate,150));
+
+        assertEquals(1350,employe.calculPay(),0.01);
+
+        PayementSchedule ps = employe.getPayementSchedule();
+        assertTrue(ps instanceof TwoWeekPay);
+
+        PayementMethod pm = employe.getPayMethod();
+        assertEquals("cash",pm.toString());
+
+
+
     }
 
 }

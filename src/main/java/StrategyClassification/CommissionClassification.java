@@ -12,11 +12,18 @@ public class CommissionClassification implements PayementClassification {
 
     @Override
     public double calculationSalary() {
-        return salary + commissionTotal;
+        return salary +commission;
+    }
+
+    public CommissionClassification(double salary){
+        this.salary = salary;
+
+        this.listeSaleReceipt = new HashMap<>();
     }
 
     public void addSaleReceipt(SaleReceipt saleReceipt)
     {
         listeSaleReceipt.put(saleReceipt.date,new SaleReceipt(saleReceipt.date,commissionTotal));
+        commission += saleReceipt.saleAmount;
     }
 }

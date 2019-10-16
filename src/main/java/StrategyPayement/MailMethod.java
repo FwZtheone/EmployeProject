@@ -3,7 +3,6 @@ package StrategyPayement;
 public class MailMethod implements PayementMethod {
 
     private String mail;
-    private String phrase;
 
     public MailMethod(String mail){
         this.mail = mail;
@@ -17,5 +16,10 @@ public class MailMethod implements PayementMethod {
     @Override
     public PayementMethod getPayMethod() {
         return new MailMethod();
+    }
+
+    @Override
+    public String toString(){
+        return "mail : "+this.mail;
     }
 }

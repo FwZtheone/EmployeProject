@@ -10,9 +10,11 @@ public class HourlyClassification implements  PayementClassification{
    private HashMap<Calendar,TimeCard> listTimeCard;
 
 
+
    public HourlyClassification(double hoursSalary){
        this.hoursSalary = hoursSalary;
        this.listTimeCard = new HashMap<>();
+
    }
 
     @Override
@@ -21,14 +23,16 @@ public class HourlyClassification implements  PayementClassification{
     }
 
     public void addTimeCard(TimeCard timeCard){
-
        this.listTimeCard.put(timeCard.getDate(),timeCard);
-        preCalcul(timeCard.getHours());
+
+        preCalcul(timeCard);
 
     }
 
-    public double preCalcul(double hours){
-       return this.salary*this.hoursSalary;
+    public double preCalcul(TimeCard timeCard){
+       this.salary  +=  timeCard.getHours() * hoursSalary;
+       System.out.println("salaire : " + salary + " heures :" + timeCard.getHours() +  " euros par h :" + hoursSalary);
+       return salary;
     }
 
 }

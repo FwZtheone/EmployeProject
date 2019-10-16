@@ -2,7 +2,7 @@ package StrategyClassification;
 
 import java.util.Calendar;
 
-public class TimeCard {
+public class TimeCard  {
 
     private Calendar date;
     private double hours;
