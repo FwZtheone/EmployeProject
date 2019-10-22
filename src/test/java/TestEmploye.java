@@ -7,6 +7,7 @@ import StrategySchedule.MonthlyPayementSchedule;
 import StrategySchedule.PayementSchedule;
 import StrategySchedule.TwoWeekPay;
 import StrategySchedule.WeeklyPayementSchedule;
+import heh.be.global.Employe;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +20,7 @@ import static junit.framework.TestCase.assertTrue;
 public class TestEmploye {
 
 
-    private  Employe employe;
+    private Employe employe;
 
     @Before
     public void setUp() throws Exception {
