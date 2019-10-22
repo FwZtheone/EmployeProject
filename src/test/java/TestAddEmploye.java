@@ -1,10 +1,8 @@
-import static org.junit.Assert.*;
-
-import FactoryMethodAddEmploye.AddSalariedEmploye;
 import FactoryMethodAddEmploye.Context;
+import FactoryMethodAddEmploye.AddSalariedEmp;
+import FactoryMethodAddEmploye.InMemoryEmployeGateway;
 import heh.be.global.Employe;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -21,10 +19,11 @@ public class TestAddEmploye {
     public void testAddSalariedEmploye()
     {
         int empId = 1;
-        AddSalariedEmploye t = new AddSalariedEmploye(empId,"Gina","Rue du bout de la haut",1000);
+        AddSalariedEmp t = new AddSalariedEmp(empId,"Gina","Rue du bout de la haut",1000);
         t.execute();
 
-        Employe e = Context.employeGateway.getEmploye(empId);
+
+
 
 
 

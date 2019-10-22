@@ -1,18 +1,14 @@
 package heh.be.global;
 
-import FactoryMethodAddEmploye.AddSalariedEmploye;
 import StrategyClassification.PayementClassification;
 import StrategyPayement.PayementMethod;
 import StrategySchedule.PayementSchedule;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Employe {
 
-    public void setEmpId(int empId) {
-        EmpId = empId;
-    }
+
 
     private int EmpId;
     private String name;
@@ -21,14 +17,31 @@ public class Employe {
     private PayementMethod transaction;
     private PayementSchedule payDay;
     private PayementClassification classification;
+    private HashMap<Integer,Employe> listeEmploye;
 
 
+    public void setEmpId(int empId) {
+        EmpId = empId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 
     public HashMap<Integer, Employe> getListeEmploye() {
         return listeEmploye;
     }
 
-    private HashMap<Integer, Employe> listeEmploye;
+
+
 
     public Employe(){};
     public int getEmpId() {
@@ -47,10 +60,7 @@ public class Employe {
         return salary;
     }
 
-    public void setListEmploye(AddSalariedEmploye obj){
 
-        this.listeEmploye.put(obj.getEmpId(),obj);
-    }
 
 
     public void setPayMethod(PayementMethod transaction){
