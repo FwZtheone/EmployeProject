@@ -36,6 +36,8 @@ public class InMemoryEmployeGateway implements employeGateway {
 
     @Override
     public void deleteEmploye(int empID) {
-    dbEmploye.remove(empID);
+
+        dbEmploye.remove(empID);
+
     }
 }

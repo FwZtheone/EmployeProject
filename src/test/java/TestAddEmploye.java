@@ -67,7 +67,6 @@ public class TestAddEmploye {
 
         PayementMethod pm = e.getPayMethod();
         assertEquals("direct depostit into Fortis:be332211",pm.toString());
-
     }
 
 
