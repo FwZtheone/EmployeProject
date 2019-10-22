@@ -1,9 +1,8 @@
-import FactoryMethodAddEmploye.Context;
-import FactoryMethodAddEmploye.AddSalariedEmp;
-import FactoryMethodAddEmploye.InMemoryEmployeGateway;
+import FactoryMethodAddEmploye.*;
 import StrategyPayement.PayementMethod;
 import StrategySchedule.MonthlyPayementSchedule;
 import StrategySchedule.PayementSchedule;
+import StrategySchedule.WeeklyPayementSchedule;
 import heh.be.global.Employe;
 import org.junit.Before;
 import org.junit.Test;
@@ -34,6 +33,40 @@ public class TestAddEmploye {
 
         PayementMethod pm = e.getPayMethod();
         assertEquals("direct deposit into Fortis:be332211",pm.toString());
+
+    }
+
+    @Test
+    public void testAddHourlyEmploye(){
+        int empId = 2;
+        AddHourlyEmploye t = new AddHourlyEmploye(empId,"BobHourly","Home_Hourly",20.0);
+        t.execute();
+
+        Employe e = Context.employeGateway.getEmploye(empId);
+        assertEquals("BobHourly",e.getName());
+
+        PayementSchedule ps = e.getPayementSchedule();
+        assertTrue(ps instanceof WeeklyPayementSchedule);
+
+        PayementMethod pm = e.getPayMethod();
+        assertEquals("direct depostit into Fortis:be332211",pm.toString());
+
+    }
+
+    @Test
+    public void testAddCommissionEmploye(){
+        int empId = 3;
+        AddCommissionEmp t = new AddCommissionEmp(empId,"KevinCom","Home_Com",1000,500);
+        t.execute();
+
+        Employe e = Context.employeGateway.getEmploye(empId);
+        assertEquals("KevinCom",e.getName());
+
+        PayementSchedule ps = e.getPayementSchedule();
+        assertTrue(ps instanceof WeeklyPayementSchedule);
+
+        PayementMethod pm = e.getPayMethod();
+        assertEquals("direct depostit into Fortis:be332211",pm.toString());
 
     }
 
