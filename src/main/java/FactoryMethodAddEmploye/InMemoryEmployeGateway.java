@@ -14,6 +14,10 @@ public class InMemoryEmployeGateway implements employeGateway {
     public InMemoryEmployeGateway(){
 
    }
+   @Override
+   public void bonjour(){
+        System.out.println("bonjour");
+   }
 
    public HashMap getDbEmploye(){
     return this.dbEmploye;

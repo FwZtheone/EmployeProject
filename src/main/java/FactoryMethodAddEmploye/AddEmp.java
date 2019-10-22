@@ -14,14 +14,13 @@ public abstract class AddEmp implements Command {
     @Override
     public void execute() {
 
-
-
         employe.setPayClassification(makePayementClassification());
         employe.setPaySchedule(makePayementSchedule());
-        employe.setPayMethod(new DirectDepositMethod("cph","be232221"));
+        employe.setPayMethod(new DirectDepositMethod("Fortis","be332211"));
 
 
         Context.employeGateway.save(employe.getEmpId(),employe);
+
 
 //        System.out.println(employe.getEmpId()+ " " + employe.getSalary() + " "+employe.getAddress() );
 
