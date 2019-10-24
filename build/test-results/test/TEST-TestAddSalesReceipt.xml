@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestAddSalesReceipt" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-24T09:32:40" hostname="LAPTOP-81RKRRUO" time="0.024">
+  <properties/>
+  <testcase name="testAddSalesReceipt" classname="TestAddSalesReceipt" time="0.024"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
