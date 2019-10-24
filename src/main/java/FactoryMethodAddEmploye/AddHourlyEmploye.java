@@ -1,7 +1,9 @@
 package FactoryMethodAddEmploye;
 
+import StrategyClassification.HourlyClassification;
 import StrategyClassification.PayementClassification;
 import StrategySchedule.PayementSchedule;
+import StrategySchedule.WeeklyPayementSchedule;
 
 public class AddHourlyEmploye  extends  AddEmp{
 
@@ -15,11 +17,11 @@ public class AddHourlyEmploye  extends  AddEmp{
 
     @Override
     public PayementSchedule makePayementSchedule() {
-        return null;
+        return new WeeklyPayementSchedule();
     }
 
     @Override
     public PayementClassification makePayementClassification() {
-        return null;
+        return new  HourlyClassification(hrlyRate);
     }
 }

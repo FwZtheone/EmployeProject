@@ -1,19 +1,25 @@
 package StrategyClassification;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 
 public class HourlyClassification implements  PayementClassification{
 
    private double hoursSalary;
    private double salary;
-   private HashMap<Calendar,TimeCard> listTimeCard;
+
+    public HashMap<Calendar, TimeCard> getListTimeCard() {
+        return listTimeCard;
+    }
+
+    private HashMap<Calendar,TimeCard> listTimeCard;
 
 
 
    public HourlyClassification(double hoursSalary){
        this.hoursSalary = hoursSalary;
-       this.listTimeCard = new HashMap<>();
+       this.listTimeCard = new HashMap<Calendar, TimeCard>();
 
    }
 

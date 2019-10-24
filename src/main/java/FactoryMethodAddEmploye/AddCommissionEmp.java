@@ -1,7 +1,9 @@
 package FactoryMethodAddEmploye;
 
+import StrategyClassification.CommissionClassification;
 import StrategyClassification.PayementClassification;
 import StrategySchedule.PayementSchedule;
+import StrategySchedule.TwoWeekPay;
 
 public class AddCommissionEmp extends AddEmp {
     private double mtlySly;
@@ -16,11 +18,11 @@ public class AddCommissionEmp extends AddEmp {
 
     @Override
     public PayementSchedule makePayementSchedule() {
-        return null;
+        return new TwoWeekPay();
     }
 
     @Override
     public PayementClassification makePayementClassification() {
-        return null;
+        return new CommissionClassification(mtlySly);
     }
 }

@@ -2,6 +2,7 @@ import FactoryMethodAddEmploye.*;
 import StrategyPayement.PayementMethod;
 import StrategySchedule.MonthlyPayementSchedule;
 import StrategySchedule.PayementSchedule;
+import StrategySchedule.TwoWeekPay;
 import StrategySchedule.WeeklyPayementSchedule;
 import heh.be.global.Employe;
 import org.junit.Before;
@@ -49,7 +50,7 @@ public class TestAddEmploye {
         assertTrue(ps instanceof WeeklyPayementSchedule);
 
         PayementMethod pm = e.getPayMethod();
-        assertEquals("direct depostit into Fortis:be332211",pm.toString());
+        assertEquals("direct deposit into Fortis:be332211",pm.toString());
 
     }
 
@@ -63,10 +64,10 @@ public class TestAddEmploye {
         assertEquals("KevinCom",e.getName());
 
         PayementSchedule ps = e.getPayementSchedule();
-        assertTrue(ps instanceof WeeklyPayementSchedule);
+        assertTrue(ps instanceof TwoWeekPay);
 
         PayementMethod pm = e.getPayMethod();
-        assertEquals("direct depostit into Fortis:be332211",pm.toString());
+        assertEquals("direct deposit into Fortis:be332211",pm.toString());
     }
 
 
