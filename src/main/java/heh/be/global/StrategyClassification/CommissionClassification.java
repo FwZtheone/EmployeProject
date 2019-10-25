@@ -6,7 +6,6 @@ import java.util.HashMap;
 public class CommissionClassification implements PayementClassification {
     private double salary;
     private double commission;
-    private double commissionTotal;
 
     public void setListeSaleReceipt(HashMap<Calendar, SaleReceipt> listeSaleReceipt) {
         this.listeSaleReceipt = listeSaleReceipt;
@@ -24,7 +23,14 @@ public class CommissionClassification implements PayementClassification {
         return salary +commission;
     }
 
-    public CommissionClassification(double salary){
+    public CommissionClassification(double commission){
+        this.commission = commission;
+        this.listeSaleReceipt = new HashMap<>();
+
+    }
+    //j'ai modifier salary pr commission
+    public CommissionClassification(double commission , double salary){
+        this.commission = commission;
         this.salary = salary;
 
 

@@ -7,6 +7,10 @@ import heh.be.global.StrategySchedule.WeeklyPayementSchedule;
 
 public class AddHourlyEmploye  extends  AddEmp{
 
+    public double getHrlyRate() {
+        return hrlyRate;
+    }
+
     private double  hrlyRate;
 
     public AddHourlyEmploye(int empId, String name, String address,double hrlyRate) {

@@ -2,6 +2,10 @@ package heh.be.global.StrategyPayement;
 
 public class MailMethod implements PayementMethod {
 
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
     private String mail;
 
     public MailMethod(String mail){

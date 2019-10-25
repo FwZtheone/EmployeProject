@@ -7,7 +7,7 @@ import heh.be.global.StrategySchedule.MonthlyPayementSchedule;
 import heh.be.global.StrategySchedule.PayementSchedule;
 import heh.be.global.Employe;
 
-public  class ChangeName extends ChgPayementClassification {
+public  class ChangeName extends ChangeEmploye {
 
     private String name;
     private double salary;
@@ -23,21 +23,11 @@ public  class ChangeName extends ChgPayementClassification {
     }
 
 
-    @Override
-    public PayementClassification makePayementClassification() {
-        return new SalariedClassification(salary);
-    }
-
-    @Override
-    public PayementSchedule makePayementShedule() {
-        return new MonthlyPayementSchedule();
-    }
 
     @Override
     public void change(Employe e) {
         e.setName(name);
-        e.setPayClassification(makePayementClassification());
-        e.setPaySchedule(makePayementShedule());
+
 
     }
 }

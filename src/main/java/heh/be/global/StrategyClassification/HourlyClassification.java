@@ -6,7 +6,12 @@ import java.util.HashMap;
 public class HourlyClassification implements  PayementClassification{
 
    private double hoursSalary;
-   private double salary;
+
+    public double getHoursSalary() {
+        return hoursSalary;
+    }
+
+    private double salary;
 
     public HashMap<Calendar, TimeCard> getListTimeCard() {
         return listTimeCard;
