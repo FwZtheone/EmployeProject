@@ -1,6 +1,5 @@
-import FactoryMethodAddEmploye.Context;
-import FactoryMethodAddEmploye.InMemoryEmployeGateway;
-import heh.be.global.Employe;
+import heh.be.global.FactoryMethodAddEmploye.Context;
+import heh.be.global.FactoryMethodAddEmploye.InMemoryEmployeGateway;
 
 public   class TestSetup {
 

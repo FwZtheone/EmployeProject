@@ -1,12 +1,11 @@
 
-import FactoryMethodAddEmploye.AddHourlyEmploye;
-import FactoryMethodAddEmploye.AddTimeCard;
-import FactoryMethodAddEmploye.Context;
-import StrategyClassification.CommissionClassification;
-import StrategyClassification.HourlyClassification;
+import heh.be.global.FactoryMethodAddEmploye.AddHourlyEmploye;
+import heh.be.global.FactoryMethodAddEmploye.AddTimeCard;
+import heh.be.global.FactoryMethodAddEmploye.Context;
+import heh.be.global.StrategyClassification.HourlyClassification;
 
-import StrategyClassification.PayementClassification;
-import StrategyClassification.TimeCard;
+import heh.be.global.StrategyClassification.PayementClassification;
+import heh.be.global.StrategyClassification.TimeCard;
 import heh.be.global.Employe;
 import org.junit.Before;
 import org.junit.Test;

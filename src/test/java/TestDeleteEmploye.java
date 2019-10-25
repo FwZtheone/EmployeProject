@@ -1,5 +1,5 @@
-import FactoryMethodAddEmploye.AddSalariedEmp;
-import FactoryMethodAddEmploye.Context;
+import heh.be.global.FactoryMethodAddEmploye.AddSalariedEmp;
+import heh.be.global.FactoryMethodAddEmploye.Context;
 import heh.be.global.Employe;
 import org.junit.Before;
 import org.junit.Test;

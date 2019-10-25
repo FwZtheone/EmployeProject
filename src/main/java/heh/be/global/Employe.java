@@ -1,8 +1,8 @@
 package heh.be.global;
 
-import StrategyClassification.PayementClassification;
-import StrategyPayement.PayementMethod;
-import StrategySchedule.PayementSchedule;
+import heh.be.global.StrategyClassification.PayementClassification;
+import heh.be.global.StrategyPayement.PayementMethod;
+import heh.be.global.StrategySchedule.PayementSchedule;
 
 import java.util.HashMap;
 

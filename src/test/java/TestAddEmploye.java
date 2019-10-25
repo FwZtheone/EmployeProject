@@ -1,9 +1,9 @@
-import FactoryMethodAddEmploye.*;
-import StrategyPayement.PayementMethod;
-import StrategySchedule.MonthlyPayementSchedule;
-import StrategySchedule.PayementSchedule;
-import StrategySchedule.TwoWeekPay;
-import StrategySchedule.WeeklyPayementSchedule;
+import heh.be.global.FactoryMethodAddEmploye.*;
+import heh.be.global.StrategyPayement.PayementMethod;
+import heh.be.global.StrategySchedule.MonthlyPayementSchedule;
+import heh.be.global.StrategySchedule.PayementSchedule;
+import heh.be.global.StrategySchedule.TwoWeekPay;
+import heh.be.global.StrategySchedule.WeeklyPayementSchedule;
 import heh.be.global.Employe;
 import org.junit.Before;
 import org.junit.Test;

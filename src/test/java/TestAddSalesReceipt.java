@@ -1,10 +1,9 @@
-import FactoryMethodAddEmploye.AddCommissionEmp;
-import FactoryMethodAddEmploye.AddSalesReceipt;
-import FactoryMethodAddEmploye.AddTimeCard;
-import FactoryMethodAddEmploye.Context;
-import StrategyClassification.CommissionClassification;
-import StrategyClassification.PayementClassification;
-import StrategyClassification.SaleReceipt;
+import heh.be.global.FactoryMethodAddEmploye.AddCommissionEmp;
+import heh.be.global.FactoryMethodAddEmploye.AddSalesReceipt;
+import heh.be.global.FactoryMethodAddEmploye.Context;
+import heh.be.global.StrategyClassification.CommissionClassification;
+import heh.be.global.StrategyClassification.PayementClassification;
+import heh.be.global.StrategyClassification.SaleReceipt;
 import heh.be.global.Employe;
 import org.junit.Before;
 import org.junit.Test;
