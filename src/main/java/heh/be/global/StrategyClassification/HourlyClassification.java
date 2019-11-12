@@ -1,5 +1,7 @@
 package heh.be.global.StrategyClassification;
 
+import heh.be.global.PayDay.Paycheck;
+
 import java.util.Calendar;
 import java.util.HashMap;
 
@@ -30,6 +32,12 @@ public class HourlyClassification implements  PayementClassification{
     @Override
     public double calculationSalary() {
         return this.salary;
+    }
+
+    @Override
+    public void calculationPay(Paycheck pc) {
+       pc.setSalary(this.calculationSalary());
+
     }
 
     public void addTimeCard(TimeCard timeCard){

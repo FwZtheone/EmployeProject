@@ -1,3 +1,5 @@
+package heh.be.global.FactoryMethodChangeEmp;
+
 import heh.be.global.Employe;
 import heh.be.global.FactoryMethodChangeEmp.ChangeEmploye;
 import heh.be.global.StrategyPayement.DirectDepositMethod;

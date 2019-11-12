@@ -1,5 +1,7 @@
 package heh.be.global.StrategyPayement;
 
+import heh.be.global.PayDay.Paycheck;
+
 public class DirectDepositMethod implements PayementMethod {
 
     private String bank;
@@ -25,5 +27,10 @@ public class DirectDepositMethod implements PayementMethod {
     @Override
     public PayementMethod getPayMethod() {
         return new DirectDepositMethod();
+    }
+
+    @Override
+    public void pay(Paycheck pc) {
+        pc.setDisposition("bank");
     }
 }

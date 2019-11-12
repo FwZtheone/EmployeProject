@@ -1,5 +1,7 @@
 package heh.be.global.StrategyClassification;
 
+import heh.be.global.PayDay.Paycheck;
+
 import java.util.Calendar;
 import java.util.HashMap;
 
@@ -21,6 +23,11 @@ public class CommissionClassification implements PayementClassification {
     @Override
     public double calculationSalary() {
         return salary +commission;
+    }
+
+    @Override
+    public void calculationPay(Paycheck pc) {
+
     }
 
     public CommissionClassification(double commission){

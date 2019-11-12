@@ -3,11 +3,14 @@ package heh.be.global.FactoryMethodAddEmploye;
 import heh.be.global.Employe;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class InMemoryEmployeGateway implements employeGateway {
 
 
     HashMap<Integer,Employe> dbEmploye = new HashMap<>();
+
 
 
     public InMemoryEmployeGateway(){
@@ -18,7 +21,12 @@ public class InMemoryEmployeGateway implements employeGateway {
         System.out.println("bonjour");
    }
 
-   public HashMap getDbEmploye(){
+    @Override
+    public Map getAllEmploye() {
+        return dbEmploye;
+    }
+
+    public HashMap getDbEmploye(){
     return this.dbEmploye;
    }
 
