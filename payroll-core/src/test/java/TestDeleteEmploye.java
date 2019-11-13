@@ -4,7 +4,8 @@ import heh.be.global.Employe;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.TestCase.*;
+import static junit.framework.TestCase.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 public class TestDeleteEmploye {
 

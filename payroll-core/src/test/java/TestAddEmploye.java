@@ -1,4 +1,7 @@
-import heh.be.global.FactoryMethodAddEmploye.*;
+import heh.be.global.FactoryMethodAddEmploye.AddCommissionEmp;
+import heh.be.global.FactoryMethodAddEmploye.AddHourlyEmploye;
+import heh.be.global.FactoryMethodAddEmploye.AddSalariedEmp;
+import heh.be.global.FactoryMethodAddEmploye.Context;
 import heh.be.global.StrategyPayement.PayementMethod;
 import heh.be.global.StrategySchedule.MonthlyPayementSchedule;
 import heh.be.global.StrategySchedule.PayementSchedule;

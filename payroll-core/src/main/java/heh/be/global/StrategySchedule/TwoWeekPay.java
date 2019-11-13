@@ -1,7 +1,6 @@
 package heh.be.global.StrategySchedule;
 
 import java.time.LocalDate;
-import java.time.YearMonth;
 
 public class TwoWeekPay  implements  PayementSchedule{
     @Override

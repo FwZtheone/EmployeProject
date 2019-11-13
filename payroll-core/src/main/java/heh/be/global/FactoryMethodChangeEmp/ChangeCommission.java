@@ -1,11 +1,9 @@
 package heh.be.global.FactoryMethodChangeEmp;
 
-import heh.be.global.Employe;
 import heh.be.global.StrategyClassification.CommissionClassification;
 import heh.be.global.StrategyClassification.PayementClassification;
 import heh.be.global.StrategySchedule.PayementSchedule;
 import heh.be.global.StrategySchedule.TwoWeekPay;
-import heh.be.global.StrategySchedule.WeeklyPayementSchedule;
 
 public class ChangeCommission extends  ChgPayementClassification {
     private double commission;

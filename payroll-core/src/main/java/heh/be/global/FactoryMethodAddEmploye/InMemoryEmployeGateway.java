@@ -3,7 +3,6 @@ package heh.be.global.FactoryMethodAddEmploye;
 import heh.be.global.Employe;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class InMemoryEmployeGateway implements employeGateway {

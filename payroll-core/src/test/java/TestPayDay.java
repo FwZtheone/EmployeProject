@@ -1,4 +1,4 @@
-import heh.be.global.FactoryMethodAddEmploye.*;
+import heh.be.global.FactoryMethodAddEmploye.AddSalariedEmp;
 import heh.be.global.PayDay.PayDay;
 import heh.be.global.PayDay.Paycheck;
 import org.junit.Before;

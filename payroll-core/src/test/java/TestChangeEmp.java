@@ -1,5 +1,7 @@
+import heh.be.global.FactoryMethodAddEmploye.AddHourlyEmploye;
+import heh.be.global.FactoryMethodAddEmploye.AddSalariedEmp;
+import heh.be.global.FactoryMethodAddEmploye.Context;
 import heh.be.global.FactoryMethodChangeEmp.*;
-import heh.be.global.FactoryMethodAddEmploye.*;
 import heh.be.global.StrategyClassification.CommissionClassification;
 import heh.be.global.StrategyClassification.HourlyClassification;
 import heh.be.global.StrategyClassification.SalariedClassification;
@@ -25,7 +27,7 @@ public class TestChangeEmp {
     public void setup() throws Exception {
         TestSetup.setupContext();
         AddHourlyEmploye employe = new AddHourlyEmploye(empID,"fabrizio","rue du paradis",100);
-        AddSalariedEmp  employe2 = new AddSalariedEmp(empID2,"anthony","rue du paradis",2000);
+        AddSalariedEmp employe2 = new AddSalariedEmp(empID2,"anthony","rue du paradis",2000);
 
         employe.execute();
         employe2.execute();

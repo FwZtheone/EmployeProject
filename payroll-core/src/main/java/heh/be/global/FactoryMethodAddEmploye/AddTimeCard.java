@@ -5,7 +5,6 @@ import heh.be.global.StrategyClassification.TimeCard;
 import heh.be.global.Employe;
 
 import java.time.LocalDate;
-import java.util.Calendar;
 
 public class AddTimeCard  implements Command{
 
