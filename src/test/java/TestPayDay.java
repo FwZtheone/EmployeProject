@@ -1,15 +1,11 @@
-import heh.be.global.FactoryMethodAddEmploye.AddCommissionEmp;
-import heh.be.global.FactoryMethodAddEmploye.AddSalariedEmp;
-import heh.be.global.FactoryMethodAddEmploye.Context;
-import heh.be.global.FactoryMethodAddEmploye.InMemoryEmployeGateway;
+import heh.be.global.FactoryMethodAddEmploye.*;
 import heh.be.global.PayDay.PayDay;
 import heh.be.global.PayDay.Paycheck;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+
 
 import static junit.framework.TestCase.assertNotNull;
 import static org.junit.Assert.assertEquals;
@@ -53,6 +49,11 @@ public class TestPayDay {
         Paycheck pc = payday.getPaycheck(empID);
         assertNull(pc);
     }
+
+
+
+
+
 
 
 

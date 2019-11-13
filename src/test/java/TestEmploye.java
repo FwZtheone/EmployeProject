@@ -11,6 +11,7 @@ import heh.be.global.Employe;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -46,8 +47,8 @@ public class TestEmploye {
         employe.setPayMethod(new MailMethod("toto@gmail.com"));
         employe.setPaySchedule(new WeeklyPayementSchedule());
 
-        Calendar date = new GregorianCalendar(2019,10,1);
-        Calendar nextDate = new GregorianCalendar(2019,10,2);
+        LocalDate date = LocalDate.of(2019,10,1);
+        LocalDate nextDate =LocalDate.of(2019,10,2);
         PayementClassification classification= employe.getPayClassfication();
         ((HourlyClassification)classification).addTimeCard(new TimeCard(date,8.0));
         ((HourlyClassification)classification).addTimeCard(new TimeCard(nextDate, 10.0));

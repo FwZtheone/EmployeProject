@@ -27,7 +27,6 @@ public class PayDay implements Command {
         listeEmp.forEach((k,v) -> {
             int id = (int)k;
             Employe e = (Employe)v;
-
             if(e.isPayDate(date)){
             Paycheck pc = new Paycheck(date);
             e.payDay(pc);

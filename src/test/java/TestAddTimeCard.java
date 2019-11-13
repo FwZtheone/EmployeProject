@@ -10,6 +10,7 @@ import heh.be.global.Employe;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -30,7 +31,7 @@ public class TestAddTimeCard {
 
     @Test
     public void testAddTimeCard(){
-        Calendar date = new GregorianCalendar(2019,10,1);
+        LocalDate date = LocalDate.of(2019,10,1);
 
         AddTimeCard addTimeCard = new AddTimeCard(20,date,3);
 

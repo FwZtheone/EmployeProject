@@ -2,8 +2,11 @@ package heh.be.global.StrategyClassification;
 
 import heh.be.global.PayDay.Paycheck;
 
+import java.sql.Time;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Map;
 
 public class HourlyClassification implements  PayementClassification{
 
@@ -15,23 +18,35 @@ public class HourlyClassification implements  PayementClassification{
 
     private double salary;
 
-    public HashMap<Calendar, TimeCard> getListTimeCard() {
+    public HashMap<LocalDate, TimeCard> getListTimeCard() {
         return listTimeCard;
     }
 
-    private HashMap<Calendar,TimeCard> listTimeCard;
+    private HashMap<LocalDate,TimeCard> listTimeCard;
 
 
 
    public HourlyClassification(double hoursSalary){
        this.hoursSalary = hoursSalary;
-       this.listTimeCard = new HashMap<Calendar, TimeCard>();
+       this.listTimeCard = new HashMap<LocalDate, TimeCard>();
 
    }
 
     @Override
     public double calculationSalary() {
-        return this.salary;
+        for(Map.Entry te: listTimeCard.entrySet()){
+            TimeCard time = (TimeCard)te.getValue();
+            if(time.getHours() > 8){
+                salary=hoursSalary*8+hoursSalary*(time.getHours()-8)*1.5;
+
+            }
+            else
+            {
+                salary  = hoursSalary * time.getHours();
+            }
+        }
+
+        return salary;
     }
 
     @Override
@@ -52,5 +67,7 @@ public class HourlyClassification implements  PayementClassification{
        System.out.println("salaire : " + salary + " heures :" + timeCard.getHours() +  " euros par h :" + hoursSalary);
        return salary;
     }
+
+
 
 }

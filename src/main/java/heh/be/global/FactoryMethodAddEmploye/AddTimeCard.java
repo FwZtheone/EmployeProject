@@ -4,16 +4,17 @@ import heh.be.global.StrategyClassification.HourlyClassification;
 import heh.be.global.StrategyClassification.TimeCard;
 import heh.be.global.Employe;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 
 public class AddTimeCard  implements Command{
 
 
     private double hour;
-    private Calendar date;
+    private LocalDate date;
     private int empID;
 
-    public AddTimeCard(double hour, Calendar date, int empID) {
+    public AddTimeCard(double hour, LocalDate date, int empID) {
         this.hour = hour;
         this.date = date;
         this.empID = empID;
@@ -21,7 +22,6 @@ public class AddTimeCard  implements Command{
 
     @Override
     public void execute() {
-
         Employe e = Context.employeGateway.getEmploye(this.empID);
 
         if(e != null ){
@@ -38,7 +38,7 @@ public class AddTimeCard  implements Command{
         }
 
         else{
-            System.out.println("pas employé par heures !");
+            System.out.println("pas employe par heures !");
 
         }
 
