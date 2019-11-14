@@ -21,8 +21,11 @@ public class DirectDepositMethod implements PayementMethod {
 
     @Override
     public String toString(){
-        return "direct deposit into "+this.bank+":"+this.accountNumber;
+//        return "direct deposit into "+this.bank+":"+this.accountNumber;
+
+        return "direct";
     }
+
 
     @Override
     public PayementMethod getPayMethod() {

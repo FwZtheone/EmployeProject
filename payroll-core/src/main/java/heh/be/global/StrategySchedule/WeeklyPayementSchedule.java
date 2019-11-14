@@ -20,4 +20,9 @@ public class WeeklyPayementSchedule implements PayementSchedule {
              return false;
         }
     }
+
+    @Override
+    public String toString(){
+        return "hebdomadaire";
+    }
 }

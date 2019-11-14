@@ -15,8 +15,10 @@ public class CashMethod implements PayementMethod {
     public void pay(Paycheck pc) {
         pc.setDisposition(this.toString());
     }
-
+    @Override
     public String toString(){
         return "cash";
     }
+
+
 }

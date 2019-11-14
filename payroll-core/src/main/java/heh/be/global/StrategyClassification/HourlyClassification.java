@@ -66,6 +66,12 @@ public class HourlyClassification implements  PayementClassification{
        return salary;
     }
 
+    @Override
+    public String toString(){
+        return "horaire";
+    }
+
+
 
 
 }

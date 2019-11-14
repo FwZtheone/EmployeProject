@@ -21,4 +21,11 @@ public class SalariedClassification implements PayementClassification{
             pc.setSalary(this.calculationSalary());
 
     }
+
+
+    @Override
+    public String toString(){
+        return "salaried";
+    }
+
 }

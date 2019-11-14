@@ -49,4 +49,9 @@ public class CommissionClassification implements PayementClassification {
         listeSaleReceipt.put(saleReceipt.getDate(),new SaleReceipt(saleReceipt.getDate(),saleReceipt.getSaleAmount()));
         commission += saleReceipt.getSaleAmount();
     }
+
+    @Override
+    public String toString(){
+        return "commission";
+    }
 }

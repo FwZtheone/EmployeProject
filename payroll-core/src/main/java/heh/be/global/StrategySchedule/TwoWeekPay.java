@@ -12,4 +12,9 @@ public class TwoWeekPay  implements  PayementSchedule{
     public boolean isPayDate(LocalDate date) {
         return false;
     }
+
+    @Override
+    public String toString(){
+        return "2 semaines";
+    }
 }

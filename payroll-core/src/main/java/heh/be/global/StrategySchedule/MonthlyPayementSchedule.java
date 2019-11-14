@@ -22,6 +22,11 @@ public class MonthlyPayementSchedule implements PayementSchedule {
 
     }
 
+    @Override
+    public String toString(){
+        return "mois";
+    }
+
 
 
 
