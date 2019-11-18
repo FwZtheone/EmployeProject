@@ -2,6 +2,7 @@ package heh.be.global.FactoryMethodAddEmploye;
 
 import heh.be.global.Employe;
 
+import java.util.List;
 import java.util.Map;
 
 public interface employeGateway {

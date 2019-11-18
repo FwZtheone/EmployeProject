@@ -5,7 +5,11 @@ import heh.be.global.FactoryMethodAddEmploye.employeGateway;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SqlEmployeGateway  implements employeGateway {
@@ -46,6 +50,21 @@ public class SqlEmployeGateway  implements employeGateway {
 
     @Override
     public void deleteEmploye(int empID) {
+        DatabaseConnectionManager objetmanager =  new DatabaseConnectionManager("localhost","payroll","postgres","root");
+        String SQL= "DELETE FROM employe WHERE id=?";
+
+        try{
+            Connection connection = objetmanager.getConnection();
+            PreparedStatement requetprepa = connection.prepareStatement(SQL);
+            requetprepa.setInt(1,empID);
+            requetprepa.execute();
+            requetprepa.close();
+
+
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
 
     }
 
@@ -56,6 +75,29 @@ public class SqlEmployeGateway  implements employeGateway {
 
     @Override
     public Map getAllEmploye() {
-        return null;
+
+        Map <Integer,String> hm = new HashMap();
+
+        DatabaseConnectionManager objetmanager =  new DatabaseConnectionManager("localhost","payroll","postgres","root");
+
+        String SQL= "SELECT * FROM employe";
+
+        try {
+            Connection connection = objetmanager.getConnection();
+            PreparedStatement statement = connection.prepareStatement(SQL);
+            ResultSet rs  = statement.executeQuery();
+            while(rs.next()){
+                hm.put(rs.getInt("id"),rs.getString("name"));
+            }
+        }
+
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+
+
+
+        return hm;
     }
 }
