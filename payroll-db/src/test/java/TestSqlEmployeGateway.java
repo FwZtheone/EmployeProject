@@ -29,7 +29,7 @@ public class TestSqlEmployeGateway {
     public void setup(){
         Context.employeGateway  = new SqlEmployeGateway();
 //        cleanTableEmploye();
-        e = new Employe(1,"fabrizio","rue du paradis");
+        e = new Employe(1,"Clement","rue du marché");
         e.setPayClassification(new SalariedClassification(2000));
         e.setPaySchedule(new MonthlyPayementSchedule());
         e.setPayMethod(new DirectDepositMethod("ING","BE-123-456-789"));

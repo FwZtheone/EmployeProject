@@ -41,7 +41,7 @@ public class SqlEmployeGateway  implements employeGateway {
             requetePrepa.setString(5,employe.getPayementSchedule().toString());
             requetePrepa.execute();
             connection.close();
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 
@@ -62,7 +62,7 @@ public class SqlEmployeGateway  implements employeGateway {
 
 
         }
-        catch (SQLException e){
+        catch (SQLException | ClassNotFoundException e){
             e.printStackTrace();
         }
 
@@ -72,6 +72,7 @@ public class SqlEmployeGateway  implements employeGateway {
     public void bonjour() {
 
     }
+
 
     @Override
     public Map getAllEmploye() {
@@ -91,7 +92,7 @@ public class SqlEmployeGateway  implements employeGateway {
             }
         }
 
-        catch (SQLException e)
+        catch (SQLException | ClassNotFoundException e)
         {
             e.printStackTrace();
         }

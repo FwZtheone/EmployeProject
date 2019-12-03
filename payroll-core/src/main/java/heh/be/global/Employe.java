@@ -1,5 +1,6 @@
 package heh.be.global;
 
+import heh.be.global.FactoryMethodAddEmploye.Context;
 import heh.be.global.PayDay.Paycheck;
 import heh.be.global.StrategyClassification.PayementClassification;
 import heh.be.global.StrategyPayement.PayementMethod;
@@ -7,6 +8,8 @@ import heh.be.global.StrategySchedule.PayementSchedule;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.Map;
+
 
 public class Employe {
 
@@ -114,6 +117,8 @@ public class Employe {
         this.classification.calculationPay(pc);
         this.transaction.pay(pc);
     }
+
+
 
 
 
