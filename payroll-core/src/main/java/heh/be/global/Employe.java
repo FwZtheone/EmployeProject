@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class Employe {
+public class   Employe {
 
 
 
@@ -22,7 +22,7 @@ public class Employe {
     private PayementMethod transaction;
     private PayementSchedule payDay;
     private PayementClassification classification;
-    private HashMap<Integer,Employe> listeEmploye;
+//    private HashMap<Integer,Employe> listeEmploye;
 
 
     public void setEmpId(int empId) {
@@ -41,9 +41,9 @@ public class Employe {
         this.salary = salary;
     }
 
-    public HashMap<Integer, Employe> getListeEmploye() {
-        return listeEmploye;
-    }
+//    public HashMap<Integer, Employe> getListeEmploye() {
+//        return listeEmploye;
+//    }
 
 
 
@@ -97,7 +97,7 @@ public class Employe {
         this.EmpId = EmpId;
         this.name = name;
         this.address  = address;
-        listeEmploye = new HashMap<>();
+//        listeEmploye = new HashMap<>();
     }
 
     public PayementMethod getPayMethod(){
