@@ -37,7 +37,7 @@ public class TestSqlEmployeGateway {
         try {
             connection = objet.getConnection();
         }
-        catch (SQLException ex){
+        catch (SQLException | ClassNotFoundException ex){
             ex.printStackTrace();
         }
     }
@@ -52,7 +52,7 @@ public class TestSqlEmployeGateway {
                 connection.close();
 
             }
-            catch (SQLException ex){
+            catch (SQLException | ClassNotFoundException ex){
                 ex.printStackTrace();
             }
         }

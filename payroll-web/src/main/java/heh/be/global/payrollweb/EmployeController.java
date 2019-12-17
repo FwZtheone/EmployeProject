@@ -2,14 +2,12 @@ package heh.be.global.payrollweb;
 
 
 import heh.be.global.Employe;
-import heh.be.global.FactoryMethodAddEmploye.Context;
-import heh.be.global.GetAllEmploye;
-import heh.be.global.SqlEmployeGateway;
+import heh.be.global.ReadEmploye;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Map;
 
 @CrossOrigin("*")
@@ -18,21 +16,27 @@ public class EmployeController {
 
 
 
-
-
-
-    @GetMapping
-    public String listEmploye(){
-        return "Test";
+    @GetMapping(value = "/bonjour")
+    public String bonjour(){
+        return "bonjour";
     }
 
 
-    @GetMapping(value = "/employeList")
-    public Map getEmploye(){
+    @GetMapping(value  ="/employeList")
+    public ArrayList<String> listEmploye(){
 
-        GetAllEmploye employe = new GetAllEmploye();
-        return employe.getAllEmploye();
+        ReadEmploye re  = new ReadEmploye();
+        ArrayList<Employe> liste = re.getAllEmploye();
+        ArrayList<String> liste2 = new ArrayList<>();
+
+        for(Employe e : liste){
+            liste2.add(e.getName());
+        }
+
+        return liste2;
+
     }
+
 
 
 }

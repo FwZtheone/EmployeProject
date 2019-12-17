@@ -3,6 +3,7 @@ package heh.be.global;
 
 import heh.be.global.FactoryMethodAddEmploye.employeGateway;
 
+import java.lang.reflect.Array;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -96,6 +97,37 @@ public class SqlEmployeGateway  implements employeGateway {
         {
             e.printStackTrace();
         }
+
+
+
+        return hm;
+    }
+
+    @Override
+    public ArrayList<Employe> receiveAllEmploye() {
+
+
+       ArrayList<Employe> hm = new ArrayList();
+
+        DatabaseConnectionManager objetmanager =  new DatabaseConnectionManager("localhost","payroll","postgres","root");
+
+        String SQL= "SELECT * FROM employe";
+
+        try {
+            Connection connection = objetmanager.getConnection();
+            PreparedStatement statement = connection.prepareStatement(SQL);
+            ResultSet rs  = statement.executeQuery();
+            while(rs.next()){
+                hm.add(new Employe(rs.getInt("id"),rs.getString("name"),rs.getString("address")));
+
+            }
+        }
+
+        catch (SQLException | ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+
 
 
 

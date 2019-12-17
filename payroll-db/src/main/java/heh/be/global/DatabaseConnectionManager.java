@@ -20,6 +20,9 @@ public class DatabaseConnectionManager {
     public Connection getConnection() throws SQLException, ClassNotFoundException {
 
         Class.forName("org.postgresql.Driver");
+
+
+
         return DriverManager.getConnection(this.url,this.properties);
     }
 }

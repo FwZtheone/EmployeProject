@@ -2,6 +2,7 @@ package heh.be.global.FactoryMethodAddEmploye;
 
 import heh.be.global.Employe;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,6 +24,11 @@ public class InMemoryEmployeGateway implements employeGateway {
     @Override
     public Map getAllEmploye() {
         return dbEmploye;
+    }
+
+    @Override
+    public ArrayList<Employe> receiveAllEmploye() {
+        return null;
     }
 
     public HashMap getDbEmploye(){
