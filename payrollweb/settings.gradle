@@ -1,0 +1,3 @@
+rootProject.name = 'payrollweb'
+include 'payroll-core'
+include 'payroll-db'

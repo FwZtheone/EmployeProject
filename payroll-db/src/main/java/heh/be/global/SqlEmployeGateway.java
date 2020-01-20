@@ -118,7 +118,7 @@ public class SqlEmployeGateway  implements employeGateway {
             PreparedStatement statement = connection.prepareStatement(SQL);
             ResultSet rs  = statement.executeQuery();
             while(rs.next()){
-                hm.add(new Employe(rs.getInt("id"),rs.getString("name"),rs.getString("address")));
+                hm.add(new Employe(rs.getInt("id"),rs.getString("name"),rs.getString("address"),rs.getString("type"),rs.getString("method"),rs.getString("schedule")));
 
             }
         }

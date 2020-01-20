@@ -22,6 +22,7 @@ public class   Employe {
     private PayementMethod transaction;
     private PayementSchedule payDay;
     private PayementClassification classification;
+    private String type,method,schedule;
 //    private HashMap<Integer,Employe> listeEmploye;
 
 
@@ -93,6 +94,7 @@ public class   Employe {
     }
 
 
+
     public Employe(int EmpId , String name, String address){
         this.EmpId = EmpId;
         this.name = name;
@@ -100,6 +102,14 @@ public class   Employe {
 //        listeEmploye = new HashMap<>();
     }
 
+    public Employe(int id,String name, String address, String type, String method, String schedule ){
+        this.EmpId = id;
+        this.name = name;
+        this.address  = address;
+        this.type  = type;
+        this.method = method;
+        this.schedule = schedule;
+    }
     public PayementMethod getPayMethod(){
         return this.transaction;
     }

@@ -17,6 +17,12 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="C:\Users\Fa\Desktop\ExamenJava\G10ProjetEPM2020\payrollweb" />
+        <option name="gradleHome" value="C:/Gradle/gradle-5.6.3" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="D:\Programmation\G10ProjetEPM2020\payroll-web" />
         <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
